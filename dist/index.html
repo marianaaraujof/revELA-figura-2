@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSUFLAÇÃO-EXSUFLAÇÃO MECÃNICA (IEM)</title>
+	 <!-- App css -->
+	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+     <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header id="header">
+        
+        <h1>Cuidados Respiratórios na ELA</h1>
+        <h2>Insuflação e Exsuflação Mecânica</h2>
+    </header>
+
+	
+    <section class="KBmap" id="IDofCreatedMap"></section>
+    
+    <!--
+    <footer>
+      rodapé do projeto
+    </footer>-->
+
+
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <script>
+      	var json = 
+			{
+				"mapMarker1": {
+					"cordX": "15",
+					"cordY": "100",
+					"icon": "assets/images/icon_circle-selected.svg",
+					"modal": {
+						"title": "Dispositivo",
+						"content": "<p>O dispositivo é a parte operante, nele se faz as alterações de pressão e tempo necessárias para dar ao paciente a melhor terapia. A sua limpeza deve ser feita somente na parte externa, assim não se deve em hipótese alguma abrir o equipamento para limpar por dentro, isso deve ser feito somente por um técnico responsável. A limpeza deve ser realizada com um pano limpo molhado com detergente neutro ou álcool. </p>"
+					}
+				},
+				"mapMarker2": {
+					"cordX": "36",
+					"cordY": "100",
+					"icon": "assets/images/icon_circle-selected.svg",
+					"modal": {
+						"title": "Tubo",
+						"content": "<p>O tubo é por onde o paciente irá receber as pressões oferecidas pelo dispositivo. A sua higienização deve ser feita com água e algumas gotas de água sanitária, após a lavagem é importante secar até que não se tenha mais água no seu interior. É importante que ele seja trocado pelo menos uma vez por ano.</p>"
+					}
+			},
+			"mapMarker3": {
+					"cordX": "56",
+					"cordY": "100",
+					"icon": "assets/images/icon_circle-selected.svg",
+					"modal": {
+						"title": "Filtro Bacteriológico",
+						"content": "<p>O filtro bacteriológico deve ser conectado entre o tubo e o dispositivo. Sua função, é impedir que possíveis bactérias entrem em contato com o paciente. Esse filtro não pode ser lavado, mas deve ser trocado sempre que perceber que está obstruído ou pode fazer a troca uma vez por mês. </p>"
+					}
+				},
+			"mapMarker4": {
+					"cordX": "75",
+					"cordY": "100",
+					"icon": "assets/images/icon_circle-selected.svg",
+					"modal": {
+						"title": "Filtro de Ar",
+						"content": "<p>filtro é localizado na parte posterior do ventilador e tem como objetivo filtrar o ar que está indo para o paciente para retirar possíveis impureza. O filtro de ar é descartável e não deve ser lavado.</p>"
+					}
+				}
+			};
+
+			(function($) {
+
+				$(document).ready(function(){ 
+
+					createKBmap('IDofCreatedMap', 'assets/images/Imagem1.png'); 
+
+					IDofCreatedMap.importJSON(json); 
+					
+					IDofCreatedMap.showAllMapMarkers(); 
+
+				});
+
+				})(jQuery);
+	</script>
+    
+
+</body>
+</html>

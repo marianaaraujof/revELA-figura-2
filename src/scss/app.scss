@@ -1,0 +1,14 @@
+//Core files
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "variables";
+@import "./node_modules/bootstrap/scss/mixins.scss";
+
+//Components
+@import "custom/components/header";
+@import "custom/components/tooltip";
+@import "KBMapMarkers";
+
+// Pages
+@import "custom/pages/index";
+
